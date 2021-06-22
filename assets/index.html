@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SISFOTMI | Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/codemirror/codemirror.css" rel="stylesheet">
+    <link href="css/plugins/codemirror/ambiance.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+</head>
+
+<body class="fixed-sidebar no-skin-config full-height-layout">
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <div class="sidebarlogo">
+                    <p> SISFO<span>TMI</span></p>
+                </div>
+
+                <div class="sidebaruser">
+                    <img alt="image" class="rounded-circle" src="img/profile_small.jpg" />
+                    <div class="username">
+                        <p class="block">Prof. Dr.
+                            Ir.Soekarno, SH</p>
+                        <p class="small">Kepala Sekolah</p>
+
+                    </div>
+                </div>
+
+
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-dashboard"></i> <span
+                                class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li class="">
+                        <a href=""><i class="fa fa-server"></i> <span class="nav-label">Induk Data</span>
+                            <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse ">
+                            <li class=""><a href="indukdata/matapelajaran.html"><i class="fa fa-caret-right"></i> Mata
+                                    Pelajaran</a></li>
+                            <li class=""><a href="indukdata/ruangankelas.html"><i class="fa fa-caret-right"></i> Ruangan
+                                    / Kelas</a></li>
+                            <li class=""><a href="indukdata/jenisptk.html"><i class="fa fa-caret-right"></i> Jenis
+                                    PTK</a></li>
+                            <li class=""><a href="indukdata/statuspegawai.html"><i class="fa fa-caret-right"></i> Status
+                                    Pegawai</a></li>
+                            <li class=""><a href="indukdata/pangkatgolruang.html"><i class="fa fa-caret-right"></i>
+                                    Pangkat/Gol. Ruang</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href=""><i class="fa fa-database"></i> <span class="nav-label">Master Data</span>
+                            <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse ">
+                            <li class=""><a href="masterdata/guru/dataguru.html"><i class="fa fa-caret-right"></i> Data
+                                    Guru</a></li>
+                            <li class=""><a href="masterdata/siswa/datasiswa.html"><i class="fa fa-caret-right"></i>
+                                    Data Siswa</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-header navnav">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
+                                class="fa fa-bars"></i>
+                        </a>
+                        <div class="small text-white">
+                            <i class="fa fa-clock-o text-white"></i>&nbsp; Senin, 21 Januari 2021 /
+                            14:32 WIB
+                        </div>
+
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+
+                        <li class="dropdown usernav">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <img alt="image" class="rounded-circle img-sm" src="img/profile_small.jpg" />
+                                <div class="nameuser">
+                                    <p class="nama">Prof. Dr. Ir.
+                                        Soekarno, SH <b class="caret"></b></p>
+                                    <p class="jabatan">Kepala Sekolah</p>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu usernav">
+                                <li>
+                                    <a href="login.html">
+                                        <i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Profil
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="login.html">
+                                        <i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log out
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="fh-no-breadcrumb">
+                <div class="full-height">
+                    <div class=" full-height-scroll border-left">
+                        <div class="element-detail-box">
+                            <div class="tab-content">
+                                <div class="tab-pane active">
+
+
+
+                                    <div class="row ">
+                                        <div class="col-lg-12">
+                                            <div class="ibox tooltip-demo">
+                                                <div class="ibox-title">
+                                                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                                                </div>
+                                                <div class="ibox-content">
+                                                    Isi content dashboard
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.dataTables-example').DataTable({
+
+                "language": {
+                    "url": "indonesia.json",
+                    "sZeroRecords": "Tidak ada data di database",
+                    "sSearch": "Cari",
+                    "oPaginate": {
+                        "sFirs": "<b>«<b>",
+                        "sPrevious": "<b>‹<b>",
+                        "sNext": "<b>›<b>",
+                        "sLast": "<b>»<b>",
+
+                    }
+                },
+
+
+                pageLength: 5,
+                responsive: true,
+                dom: '<"html5buttons"B>ftp',
+                buttons: [
+                    // { extend: 'excel', title: 'ExampleFile' },
+                    { extend: 'pdf', title: 'ExampleFile' },
+
+                    {
+                        extend: 'print',
+                        customize: function (win) {
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                        }
+                    }
+                ],
+
+
+
+
+
+
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
