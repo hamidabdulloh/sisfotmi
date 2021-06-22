@@ -20,9 +20,11 @@
                         <thead>
                             <tr>
                                 <th style="min-width: 10px;">No</th>
-                                <th style="min-width: 60px;">ID</th>
-                                <th style="min-width: 150px;">Nama Lengkap</th>
-                                <th style="min-width: 250px;">Mapel Diampu</th>
+                                <th style="min-width: 100px;">NIP</th>
+                                <th style="min-width: 150px;">Nama</th>
+                                <th style="min-width: 150px;">Alamat</th>
+                                <th style="min-width: 70px;">Jenis PTK</th>
+                                <th style="min-width: 50px;">Status Kepegawaian</th>
                                 <th style="min-width: 60px;">Aksi</th>
 
                             </tr>
@@ -32,9 +34,11 @@
                             foreach ($guru as $gr) { ?>
                                 <tr>
                                     <td class="text-center"><?= $no++; ?></td>
-                                    <td><?= $gr['idguru']; ?></td>
+                                    <td><?= $gr['nip']; ?></td>
                                     <td><?= $gr['guru']; ?></td>
-                                    <td></td>
+                                    <td><?= $gr['alamat']; ?></td>
+                                    <td><?= $gr['idjenisptk']; ?></td>
+                                    <td><?= $gr['idstatuskepegawaian']; ?></td>
                                     <td class="text-center">
                                         <div style="margin-top: -5px;">
                                             <!-- <a type="button" class="btn btn-success  btn-xs text-white" data-toggle="tooltip" data-placement="top" title="Update"><i class="fa fa-edit"></i></a> -->

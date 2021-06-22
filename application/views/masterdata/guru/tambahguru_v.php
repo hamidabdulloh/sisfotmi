@@ -76,13 +76,12 @@
                                         Jenis PTK
                                     </label>
                                     <div class="col-md-8">
-                                        <select id="jenisptk" name="jenisptk" type="text" class="select2_demo_ptk form-control input-sm" value="<?= set_value('jenisptk') ?>">
-                                            <option></option>
-                                            <?php foreach ($jenisptk->result() as $key => $data) { ?>
-                                                <option value=""><?= $data->jenisptk  ?> </option>
-                                            <?php } ?>
+                                        <select id="idjenisptk" name="idjenisptk" type="text" class="select2_demo_ptk form-control input-sm" value="<?= set_value('idjenisptk') ?>">
+                                            <option value="PTK 1">PTK 1</option>
+                                            <option value="PTK 2">PTK 2</option>
+
                                         </select>
-                                        <small class="form-text text-danger notifrequired"><?= form_error('jenisptk'); ?></small>
+                                        <small class="form-text text-danger notifrequired"><?= form_error('idjenisptk'); ?></small>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -90,11 +89,13 @@
                                         Matapelajaran yang diampu
                                     </label>
                                     <div class="col-md-8">
-                                        <select id="matapelajaran" name="matapelajaran" type="text" class="select2_demo_mapel form-control input-sm" multiple="multiple" value="<?= set_value('matapelajaran') ?>" style="width: 100%;">
-                                            <option></option>
+                                        <select id="idmatapelajaran" name="idmatapelajaran" type="text" class="select2_demo_mapel form-control input-sm" multiple="multiple" value="<?= set_value('idmatapelajaran') ?>" style="width: 100%;">
+
+                                            <option value="Aqidah Akhlaq">Aqidah Akhlaq</option>
+                                            <option value="Kimia">Kimia</option>
 
                                         </select>
-                                        <small class="form-text text-danger notifrequired"><?= form_error('matapelajaran'); ?></small>
+                                        <small class="form-text text-danger notifrequired"><?= form_error('idmatapelajaran'); ?></small>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -115,7 +116,7 @@
                                         Status Kepegawaian
                                     </label>
                                     <div class="col-md-8">
-                                        <select id="statuskepegawaian" name="statuskepegawaian" type="text" class="select2_demo_kepegawaian form-control input-sm" value="<?= set_value('statuskepegawaian') ?>">
+                                        <select id="idstatuskepegawaian" name="idstatuskepegawaian" type="text" class="select2_demo_kepegawaian form-control input-sm" value="<?= set_value('idstatuskepegawaian') ?>">
                                             <option></option>
                                             <option value="pegawai1">Pegawai 1</option>
                                             <option value="pegawai2">Pegawai 2</option>
@@ -123,7 +124,7 @@
                                             <option value="pegawai4">Pegawai 4</option>
                                             <option value="pegawai5">Pegawai 5</option>
                                         </select>
-                                        <small class="form-text text-danger notifrequired"><?= form_error('statuskepegawaian'); ?></small>
+                                        <small class="form-text text-danger notifrequired"><?= form_error('idstatuskepegawaian'); ?></small>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -148,7 +149,7 @@
                                         Tanggal CPNS
                                     </label>
                                     <div class="col-md-8">
-                                        <input id="tanggalcpns" name="tanggalcpns" type="text" class="form-control input-sm" value="<?= set_value('tanggalcpns') ?>">
+                                        <input id="tanggalcpns" name="tanggalcpns" type="date" class="form-control input-sm" value="<?= set_value('tanggalcpns') ?>">
                                         <small class="form-text text-danger notifrequired"><?= form_error('tanggalcpns'); ?></small>
                                     </div>
                                 </div>
@@ -175,8 +176,8 @@
                                         Lemb. Pengangkat
                                     </label>
                                     <div class="col-md-8">
-                                        <input id="lembagapengangkat" name="lembagapengangkat" type="text" class="form-control input-sm" value="<?= set_value('lembagapengangkat') ?>">
-                                        <small class="form-text text-danger notifrequired"><?= form_error('lembagapengangkat'); ?></small>
+                                        <input id="lembpengangkat" name="lembpengangkat" type="text" class="form-control input-sm" value="<?= set_value('lembpengangkat') ?>">
+                                        <small class="form-text text-danger notifrequired"><?= form_error('lembpengangkat'); ?></small>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -194,13 +195,15 @@
                                         Foto
                                     </label>
                                     <div class="col-md-8">
-                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                        <input id="foto" name="foto" type="text" class="form-control input-sm" value="<?= set_value('foto') ?>">
+
+                                        <!-- <div class="fileinput fileinput-new" data-provides="fileinput">
                                             <span class="btn btn-primary btn-outline btn-file"><span class="fileinput-new">Pilih File</span>
                                                 <span class="fileinput-exists">Ubah</span><input type="file" name="..." /></span>
                                             <span style="margin-left: 5px; color:teal" class="fileinput-filename "></span>
                                             <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none; color:black">×</a>
-                                        </div>
-                                        <small class="form-text text-danger notifrequired"><?= form_error('statuskeaktifan'); ?></small>
+                                        </div> -->
+                                        <small class="form-text text-danger notifrequired"><?= form_error('foto'); ?></small>
                                     </div>
                                 </div>
                             </div>

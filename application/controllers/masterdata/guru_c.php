@@ -7,7 +7,7 @@ class guru_c extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(['masterdata/guru_m', 'indukdata/jenisptk_m', 'indukdata/matapelajaran_m', 'indukdata/statuskepegawaian_m']);
+        $this->load->model('masterdata/guru_m');
     }
     public function index()
     {
@@ -19,26 +19,16 @@ class guru_c extends CI_Controller
 
     public function tambahguru()
     {
-        $matapelajaran = $this->matapelajaran_m->getAllmatapelajaran();
-        $jenisptk = $this->jenisptk_m->getAlljenisptk();
-        $statuskepegawaian = $this->statuskepegawaian_m->getAllstatuskepegawaian();
-
-        $data = array(
-            'matapelajaran' => $matapelajaran,
-            'jenisptk' => $jenisptk,
-            'statuskepegawaian' => $statuskepegawaian
-        );
-
         $this->form_validation->set_rules('idguru', '⚠ ID', 'required|is_unique[tb_guru.idguru]');
         $this->form_validation->set_rules('guru', '⚠ Nama Guru', 'required');
         $this->form_validation->set_rules('jeniskelamin', '⚠ Jenis Kelamin', '');
         $this->form_validation->set_rules('tempatlahir', '⚠ Tempat Lahir', '');
         $this->form_validation->set_rules('tanggallahir', '⚠ Tanggal Lahir', '');
         $this->form_validation->set_rules('alamat', '⚠ Alamat', '');
-        $this->form_validation->set_rules($jenisptk, '⚠ Jenis PTK', '');
-        $this->form_validation->set_rules($matapelajaran, '⚠ Mata Pelajaran', '');
+        $this->form_validation->set_rules('idjenisptk', '⚠ Jenis PTK', '');
+        $this->form_validation->set_rules('idmatapelajaran', '⚠ Mata Pelajaran', '');
         $this->form_validation->set_rules('tugastambahan', '⚠ Tugas Tambahan', '');
-        $this->form_validation->set_rules($statuskepegawaian, '⚠ Status Kepegawaian', '');
+        $this->form_validation->set_rules('idstatuskepegawaian', '⚠ Status Kepegawaian', '');
         $this->form_validation->set_rules('nip', '⚠ NIP', '');
         $this->form_validation->set_rules('skcpns', '⚠ SK CPNS', '');
         $this->form_validation->set_rules('tanggalcpns', '⚠ Tanggal CPNS', '');
@@ -51,7 +41,7 @@ class guru_c extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('main/header_v');
-            $this->load->view('masterdata/guru/tambahguru_v', $data);
+            $this->load->view('masterdata/guru/tambahguru_v');
             $this->load->view('main/footer_v');
         } else {
             $this->guru_m->tambahguru();
